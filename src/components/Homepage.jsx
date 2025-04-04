@@ -1,5 +1,5 @@
 
-export default function Homepage(){
+export default function Homepage({setPage}){
 
     return(
         <>
@@ -26,7 +26,7 @@ export default function Homepage(){
 
 
             {/* academics section */}
-            <div className="w-full mt-5 flex flex-col items-center mb-40">
+            <div className="w-full mt-5 flex flex-col items-center mb-40" onClick={()=>{setPage("Academics")}}>
                 <span className="md:text-7xl text-5xl font-bold text-[#4F4B25]">Academics</span>
                 <div className="mt-10 mb-5 w-[50%] mx-auto border-2 border-black md:h-[450px] sm:h-[350px] h-[200px] rounded-xl relative group overflow-hidden cursor-pointer">
                     {/* Image */}
@@ -34,7 +34,7 @@ export default function Homepage(){
 
                     {/* Overlay with text */}
                     <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 group-hover:opacity-40 transition-all duration-500 ease-in-out translate-y-10 group-hover:translate-y-0">
-                        <span className="text-white text-lg font-semibold">Tap to know more</span>
+                        <span className="text-white text-lg font-semibold" >Tap to know more</span>
                     </div>
                 </div>
 
@@ -45,7 +45,7 @@ export default function Homepage(){
             </div>
 
             {/* Career section */}
-            <div className="w-full mt-5 flex flex-col items-center mb-40">
+            <div className="w-full mt-5 flex flex-col items-center mb-40"  onClick={()=>{setPage("Career")}}>
                 <span className="md:text-7xl text-5xl font-bold text-[#4F4B25]">Career</span>
                 <div className="mt-10 mb-5 w-[50%] mx-auto border-2 border-black md:h-[450px] sm:h-[350px] h-[200px] rounded-xl relative group overflow-hidden cursor-pointer">
                     {/* Image */}
@@ -64,7 +64,7 @@ export default function Homepage(){
             </div>
 
             {/* Personal section */}
-            <div className="w-full mt-5 flex flex-col items-center mb-40">
+            <div className="w-full mt-5 flex flex-col items-center mb-40"  onClick={()=>{setPage("Personal")}}>
                 <span className="md:text-7xl text-5xl font-bold text-[#4F4B25]">Personal</span>
                 <div className="mt-10 mb-5 w-[50%] mx-auto border-2 border-black md:h-[450px] sm:h-[350px] h-[200px] rounded-xl relative group overflow-hidden cursor-pointer">
                     {/* Image */}
@@ -83,7 +83,7 @@ export default function Homepage(){
             </div>
 
             {/* Miscellaneous */}
-            <div className="w-full mt-5 flex flex-col items-center mb-40">
+            <div className="w-full mt-5 flex flex-col items-center mb-40"  onClick={()=>{setPage("Miscellaneous")}}>
                 <span className="md:text-7xl text-5xl font-bold text-[#4F4B25]">Miscellaneous</span>
                 <div className="mt-10 mb-5 w-[50%] mx-auto border-2 border-black md:h-[450px] sm:h-[350px] h-[200px] rounded-xl relative group overflow-hidden cursor-pointer">
                     {/* Image */}
@@ -115,6 +115,29 @@ export default function Homepage(){
                     taken out of context without written permission from Insight. 
                     If you wish to reproduce any content herein, please contact the Chief Editors or Mail to: insight@iitb.ac.in
                 </p>
+            </div>
+
+            {/* Credits */}
+            <div className="w-full bg-[#8FA684] flex flex-col items-center">
+                <div className="h-auto mx-auto text-center p-2">
+                    <h1 className="text-[#4B4827] text-4xl font-semibold underline my-2">Credits</h1>
+                    <ul>
+                        <li><span className="font-semibold mr-2">Editorial credits: </span> Aditya Torne, Shubham Agarwal and Kumud Mantri</li>
+                        <li><span className="font-semibold mr-2">Design credits: </span> Manya Wahi and Gouraang Gune</li>
+                        <li><span className="font-semibold mr-2">Website developed by: </span> Anish Ajay Jadhav and Prateek Sharma</li>
+                    </ul>
+                </div>
+                <div className="w-[50%] h-[1px] bg-[#4B4827] mt-2"></div>
+                <div className="h-auto mx-auto text-center p-2">
+                    <h1 className="text-[#4B4827] text-4xl font-semibold underline my-2">Contact Us!</h1>
+                    <p className="w-full text-center">
+                        In case of any queries, clarification or
+                        feedback, kindly reach out to the Chief Editors
+                    </p>
+                    <span><b>Ayush Agarwal: </b>210100035@iitb.ac.in</span><br />
+                    <span><b>Ishita Poddar: </b>21b030016@iitb.ac.in</span>
+
+                </div>
             </div>
         </>
     )
